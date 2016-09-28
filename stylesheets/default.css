@@ -1,0 +1,730 @@
+/*
+
+'||'''|. .|''''|,    '||\   ||` .|''''|, |''||''|    .|''''|, \\      // '||''''| '||'''|, '||'''|, |''||''| '||'''|. '||''''|
+ ||   || ||    ||     ||\\  ||  ||    ||    ||       ||    ||  \\    //   ||   .   ||   ||  ||   ||    ||     ||   ||  ||   . 
+ ||   || ||    ||     || \\ ||  ||    ||    ||       ||    ||   \\  //    ||'''|   ||...|'  ||...|'    ||     ||   ||  ||'''| 
+ ||   || ||    ||     ||  \\||  ||    ||    ||       ||    ||    \\//     ||       || \\    || \\      ||     ||   ||  ||     
+.||...|' `|....|'    .||   \||. `|....|'   .||.      `|....|'     \/     .||....| .||  \\. .||  \\. |..||..| .||...|' .||....|
+
+*/
+
+
+/* CLIENT STYLE OVERRIDES DO NOT GO IN THIS STYLESHEET - THEY GO IN THE CLIENT LEVEL VERSION OF webprogram.css */
+
+/* Shared styles for webprogram */
+
+/* GENERAL STYLES */
+
+/* Links */
+a:link {
+	color: #0066B3;
+	text-decoration: none;
+}
+
+a:visited {
+	color: #633100;
+	text-decoration: none;
+}
+
+a:hover {
+	text-decoration: underline;
+}
+
+a:active {
+	color: #2C06A1;
+	text-decoration: none;
+}
+
+a.currentpage {
+	color: #000000;
+	text-decoration: none;
+}
+
+/* Body for all pages */
+body {
+	background-color: #1C497F;
+	text-align: center;
+	margin: 0px;
+	font-size: 0.85em;
+	font-family: Verdana, Geneva, Arial, Helvetica, sans-serif;
+}	
+
+/* Main div for each page */
+.page {
+	background-color: #FFFFFF;
+	width: 700px;
+	font-family: Verdana, Geneva, Arial, Helvetica, sans-serif;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+/* Page title */
+.title {
+	background-color: #EFEFEF;
+	padding: 10px 20px 3px 20px;
+	border-bottom: 2px solid #FFFFFF;
+	font-size: 0.7em;
+	font-style: italic;
+	text-align: left;
+	font-weight: normal;
+	margin: 0px;
+}
+
+/* Page subtitle */
+.subtitle {
+	background-color: #FFF2E6;
+	padding: 2px 20px 2px 20px;
+	margin-top: 5px;
+	border-bottom: 1px solid #000000;
+	text-align: left;
+	font-size: 0.85em;
+	font-weight: normal;
+}
+
+/* Banner image block - should match banner size */
+.banner {
+	width : 700px;
+	height : 95px;
+}
+
+/* Navigation breadcrumbs */
+.navigation {
+	padding: 5px 20px 5px 20px;
+	font-size: 0.7em;
+	line-height: 1.4em;
+	background: #EFEFEF;
+}
+
+/* Content of each page */
+.content, #searchdisplay td {
+	text-align: left;
+	margin:  0px 20px 20px 20px;
+	font-size: 0.8em;
+	padding-top: 10px;
+	padding-bottom: 10px;
+}
+
+/* Generic list items */
+.item, .itemset {
+	margin: 2px 0px 8px 0px;
+	text-align: left;
+	clear: left;
+}
+
+.item .recordings, .itemset .recordings {
+	float: left;
+	width: 3.5em;
+	text-align: center;
+}
+
+.item .itemnumber, .itemset .itemnumber {
+	float: left;
+	width: 3.5em;
+	margin-right: 1.0em;
+	text-align: center;
+}
+
+.item .itemtitle, .itemset .itemnumber {
+	font-weight: bold;
+	margin-left: 8.6em;
+}
+
+.withdrawn {
+	font-weight: bold;
+	background-color:#D4D0CB;
+	font-style: italic;
+	color: #A30017;
+	
+}
+
+.itemset {
+	margin-left: 5em;
+}
+
+.itemset .parentitem {
+	border-bottom: 1px dotted gray;
+}
+
+.instructions {
+	margin: 1.0em 0.0em 1.0em 0.0em;
+	text-align: left;
+	font-style: italic;
+}
+
+/* END GENERAL STYLES */
+
+
+/* AUTHOR AND KEYWORD INDEX INDEX STYLES */
+
+.authorindex .alphalist, .keywordindex .alphalist{
+	text-align: center;
+	padding: 0.5em 0em 0.5em 0em;
+	border: 1px solid #BFAA60;
+}
+
+.authorindex .author, .keywordindex .keyword {
+	float: left;
+	font-weight: bold;
+	margin-right: 1.0em;
+}
+
+.authorindex .papers, .keywordindex .papers {
+	margin-left: 10.0em;
+}
+
+.authorindex .medialink, .keywordindex .medialink {
+	padding: 0.2em 0.1em;
+	border: 1px solid #994D00;
+	margin-right: 20px;
+	white-space: nowrap;
+}
+
+.authorindex .media, .keywordindex .media {
+	margin: 10px;
+	padding: 0px 5px;
+	line-height:2em;
+}
+
+.keywordindex .entries {
+	margin-left: 15.0em;
+}
+
+
+/* END AUTHOR INDEX STYLES */
+
+
+/* MEETING STYLES */
+.meeting .date {
+	clear: left;
+	background-color:#FFFFFF;
+	border-bottom: 1px solid #000000;
+	color: #596F80;
+	padding: 2px 0px 2px 0px;
+	margin:  5px 0px 0px 0px;
+	text-align: center;
+	font-size: 0.9em;
+	font-weight: normal;
+}
+
+.meeting .author {
+	font-weight: normal;
+}
+
+.meeting .time {
+	color: #C3362F;
+	text-align: left;
+	border-bottom: 1px dashed #CCCCCC;
+	margin: 8px 0px 7px 0px;
+	clear: left;
+	font-weight: normal;
+	font-size: 0.9em;
+}
+
+.meeting .days {
+	float: right;
+	text-align: right;
+	font-size: 0.9em;
+}
+
+.meeting .daysheader {
+	margin-bottom: 10px;
+	clear: all;
+	text-align: center;
+	font-size: 0.9em;
+}
+
+.meeting .symposium {
+	text-align: left;
+	clear: left;
+	font-weight: normal;
+	text-decoration: underline;
+	margin: 0px 0px 0px 8.6em;
+}
+
+.meeting .medialink {
+	padding: 0.2em 0.1em;
+	border: 1px solid #994D00;
+	margin-right: 20px;
+	white-space: nowrap;
+}
+
+.meeting .media {
+	margin: 10px;
+	padding: 0px 5px;
+	line-height:2em;
+}
+
+/* END MEETING STYLES */
+
+/* POSTER STYLES */
+.posters .date {
+	clear: left;
+	background-color:#FFFFFF;
+	border-bottom: 1px solid #000000;
+	color: #596F80;
+	padding: 2px 0px 2px 0px;
+	margin:  5px 0px 0px 0px;
+	text-align: center;
+	font-size: 0.9em;
+	font-weight: normal;
+}
+
+.posters .author {
+	font-weight: normal;
+}
+
+.posters .time {
+	color: #C3362F;
+	text-align: left;
+	border-bottom: 1px dashed #CCCCCC;
+	margin: 8px 0px 7px 0px;
+	clear: left;
+	font-weight: normal;
+	font-size: 0.9em;
+}
+
+.posters .days {
+	float: right;
+	text-align: right;
+	font-size: 0.9em;
+}
+
+.posters .daysheader {
+	margin-bottom: 10px;
+	clear: all;
+	text-align: center;
+	font-size: 0.9em;
+}
+
+.posters .symposium {
+	text-align: left;
+	clear: left;
+	font-weight: normal;
+	text-decoration: underline;
+	margin: 0px 0px 0px 8.6em;
+}
+
+.posters .medialink {
+	padding: 0.2em 0.1em;
+	border: 1px solid #994D00;
+	margin-right: 20px;
+	white-space: nowrap;
+}
+
+.posters .media {
+	margin: 10px;
+	padding: 0px 5px;
+	line-height:2em;
+}
+
+/* END POSTER STYLES */
+
+
+/* PAPER STYLES */
+
+.paperauthors {
+	font-style: italic;
+	font-weight: normal
+}
+
+.paper .number {
+	color: #FFFFFF;
+	padding: 2px;
+	background-color: #6096BF;
+}
+
+.paper .abstract {}
+
+.paper .author {
+	font-style: italic;
+	clear: left;
+}
+
+.author .name {}
+
+.author .affiliation {}
+
+.paper .media {
+	margin: 10px;
+	padding: 0px 5px;
+}
+.paper .medialink {
+	padding: 0.1em 0.1em 0.2em 0.4em;
+	border: 1px solid #994D00;
+	margin-right: 20px;
+}
+
+.paper .datetime {
+	font-style: italic;
+	text-align: left;
+	color : #994D00;
+	margin: 1.0em 0.0em 0.2em 0.0em;
+}
+
+.paper .location {
+	font-style: italic;
+	text-align: left;
+	color : #994D00;
+	margin-bottom: 1em;
+}
+
+.paper .parents {
+	margin-top: 5px;
+	padding: 5px 0px 5px 0px;
+	border-top: 1px solid #CCCCCC;
+	text-align: center;
+}
+
+/* END PAPER STYLES */
+
+
+/* PROGRAM STYLES */
+
+.program .number {
+	color: #FFFFFF;
+	padding: 2px;
+	background-color: #1C497F;
+}
+
+.program .date {
+	clear: left;
+	background-color:#FFFFFF;
+	border-bottom: 1px solid #000000;
+	color: #596F80;
+	padding: 2px 0px 2px 0px;
+	margin:  5px 0px 0px 0px;
+	text-align: center;
+	font-size: 0.9em;
+	font-weight: normal;
+}
+
+.program .author {
+	font-weight: normal;
+}
+
+.program .time {
+	color: #C3362F;
+	text-align: left;
+	border-bottom: 1px dashed #CCCCCC;
+	margin: 8px 0px 7px 0px;
+	clear: left;
+	font-weight: normal;
+	font-size: 0.9em;
+}
+
+.program .days {
+	float: right;
+	text-align: right;
+	font-size: 0.9em;
+}
+
+.program .symposium {
+	text-align: left;
+	clear: left;
+	font-weight: normal;
+	text-decoration: underline;
+	margin: 0px 0px 0px 8.6em;
+}
+
+
+/* END PROGRAM STYLES */
+
+
+/* PROGRAM INDEX STYLES */
+
+.programindex .symposia {
+	margin: 0px 8px 0px 40px;
+}
+
+.programindex .symposium {
+	display: list-item;
+}
+
+
+/* END INDEX STYLES */
+
+
+/* SYMPOSIUM STYLES */
+
+.symposium .number {
+	color: #FFFFFF;
+	padding: 2px;
+	background-color: #1C497F;
+}
+
+.symposium .date {
+	clear: left;
+	background-color:#FFFFFF;
+	border-bottom: 1px solid #000000;
+	color: #596F80;
+	padding: 2px 0px 2px 0px;
+	margin:  5px 0px 0px 0px;
+	text-align: center;
+	font-size: 0.9em;
+	font-weight: normal;
+}
+
+.symposium .author {
+	font-weight: normal;
+}
+
+.symposium .time {
+	color: #C3362F;
+	text-align: left;
+	border-bottom: 1px dashed #CCCCCC;
+	margin: 8px 0px 7px 0px;
+	clear: left;
+	font-weight: normal;
+	font-size: 0.9em;
+}
+
+.symposium .days {
+	float: right;
+	text-align: right;
+	font-size: 0.9em;
+}
+
+.symposium .symposium {
+	text-align: left;
+	clear: left;
+	font-weight: normal;
+	font-size: 0.9em;
+	text-decoration: underline;
+	margin-left: 8.6em;
+}
+
+
+/* END SYMPOSIUM STYLES */
+
+
+/* SESSION STYLES */
+
+.session .number {
+	color: #FFFFFF;
+	padding: 2px;
+	background-color: #401010;
+}
+
+.session .abstract {
+	margin: 1.0em 0.0em 1.0em 0.0em;
+	text-align: left;
+}
+
+.session .paper {
+	margin: 5px 0px 5px 0px;
+	text-align: left;
+	clear: left;
+}
+
+.session .papertime {
+	width: 84px;
+	float: left;
+	text-align: right;
+	background-color: #E6F4FF;
+}
+
+.session .papernumber {
+	margin-left: 7px;
+	width: 70px;
+	float: left;
+	text-align: center;
+	background-color: #E6F4FF;
+	font-weight: bold;
+}
+
+.session .papertitle {
+	margin-left: 168px;
+	text-align: left;
+}
+
+.session .persongroup {
+	margin: 5px 0px 5px 0px;
+	text-align: left;
+	clear: left;
+}
+
+.session .group {
+	width: 161px;
+	float: left;
+	text-align: right;
+	font-size: 1.0em;
+}
+
+.session .people {
+	margin-left: 168px;
+	text-align: left;
+	font-style: italic;
+	font-size: 1.0em;
+}
+
+.session .datetime {
+	font-style: italic;
+	text-align: left;
+	color : #994D00;
+	margin: 1.0em 0.0em 0.2em 0.0em;
+}
+
+.session .location {
+	font-style: italic;
+	text-align: left;
+	color : #994D00;
+	margin-bottom: 1em;
+}
+
+.session .parents {
+	margin-top: 1.0em;
+	padding: 5px 0px 5px 0px;
+	border-top: 1px solid #CCCCCC;
+	text-align: center;
+}
+
+.session .siblings, .paper .siblings {
+	margin-top: 5px;
+	padding: 5px 0px 5px 0px;
+	border-bottom: 1px solid #CCCCCC;
+	text-align: center;
+}
+
+.session .media {
+	margin: 10px;
+	padding: 0px 5px;
+	line-height:2em;
+}
+.session .medialink {
+	padding: 0.2em 0.1em;
+	border: 1px solid #994D00;
+	margin-right: 20px;
+	white-space: nowrap;
+}
+
+/* END SESSION STYLES */
+
+
+/* START PAGE STYLES */
+
+.start .header {
+	padding: 2px 0px 2px 0px;
+	text-align: center;
+	background: #EFEFEF;
+	font-weight: normal;
+	font-size: 1em;
+	margin: 0px;
+}
+
+.start .section {
+	padding: 10px;
+}
+
+.start .leftcolumn {
+	float: left;
+	width: 50%;
+}
+
+.start .rightcolumn {
+	margin-left: 50%;
+}
+
+.start .columnheader {
+	font-weight: bold;
+	padding-bottom: .5em;
+}
+
+/* Make the htdig search form match everything else */
+.searchform TD {
+	font-size: 0.65em;
+	font-family: Verdana, Geneva, Arial, Helvetica, sans-serif;
+}
+
+/* Hide db build */
+.searchform .databasebuild {
+	display: none;
+}
+
+/* END START PAGE STYLES */
+
+
+/* MULTIMEDIA FILE STYLES */
+
+.file {
+	background-repeat: no-repeat;
+	padding-left: 20px;
+	padding-bottom: 20px;
+}
+.file_flv { background-image: url(../images/flv.gif);}
+.file_pdf { background-image: url(../images/pdf.gif); }
+.file_mp3 { background-image: url(../images/mp3.gif); }
+.file_m4a,.file_mp4,.file_wmv,.file_wma,.file_avi,.file_wav,.file_mpg  { background-image: url(../images/wmv.gif); }
+.file_mov { background-image: url(../images/mov.gif); }
+.file_wrf { background-image: url(../images/wrf.gif); }
+.file_podium { background-image: url(../images/podium.gif); }
+.file_many { background-image: url(../images/more.gif); }
+.file_pps,.file_ppt,.file_pptx {  background-image: url(../images/ppt.gif);  }
+.file_wp,.file_wpd {  background-image: url(../images/wp.gif); }
+.file_css,.file_mht,.file_html,.file_htm { background-image: url(../images/htm.gif); }
+.file_bmp,.file_gif,.file_png,.file_jpg,.file_tif,.file_tiff {  background-image: url(../images/image.gif); }
+.file_psd,.file_ps,.file_eps {  background-image: url(../images/psd.gif); }
+.file_rtf,.file_doc,.file_docx {  background-image: url(../images/doc.gif); }
+.file_xls,.file_xlsx {  background-image: url(../images/xls.gif); }
+.file_tex {  background-image: url(../images/tex.gif); }
+.file_fm {  background-image: url(../images/fm.gif); }
+.file_zip {  background-image: url(../images/zip.gif); }
+.file_poster {  background-image: url(../images/poster.gif); }
+.file_multi { background-image: url(../images/multifile.gif); }
+
+/* END MULTIMEDIA FILE STYLES */
+
+.presenter .name {
+       font-weight: bold;
+}
+
+/* MISC STYLES */
+.itemset .childitem {
+	padding-left: 8.6em;
+}
+
+/* TOPDISPLAY STYLES */
+.topdisplay {
+	width: 100%;
+	padding: 8px;
+}
+
+.topdisplay .role {
+	width: 10%;
+	font-size: 10px;
+	font-weight: bold;
+	vertical-align: top;
+	text-align: right;
+	
+}
+
+.topdisplay .people {
+	width: 90%;
+	font-size: 10px;
+	font-weight: normal;	
+	font-style: normal;
+}
+
+.topdisplay_role {
+	font-size: 10px;
+	font-weight: bold;
+	vertical-align: top;
+	text-align: left;
+	
+}
+
+.topdisplay_people {
+	width: 90%;
+	font-size: 10px;
+	font-weight: normal;	
+	font-style: normal;
+	margin: 0 0 5 20;
+}
+
+
+td {font-size: 0.8em;}
+
+@media print {
+	.noprint {
+		display: none;
+	}
+}
